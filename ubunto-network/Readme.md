@@ -6,7 +6,7 @@
 ## Fireewall
 
 To get status of the firewall
- >`sudo ufw status`
+ `sudo ufw status`
 
 Turn off firewall 
 > `sudo ufw disable` 
