@@ -5,15 +5,27 @@
 
 ## Fireewall
 
-* `sudo ufw status` to get status of the firewall
-* `sudo ufw disable` turn off firewall
-* `sudo ufw enable`  turn on firewall
-* `sudo ifconfig eth0 down` disable network interface
-* `sudo ifconfig eth0 up` enable network interface
+To get status of the firewall
+ > `sudo ufw status`
+
+Turn off firewall 
+> `sudo ufw disable` 
+
+Turn on firewall
+> `sudo ufw enable`  
+
+Disable network interface
+> `sudo ifconfig eth0 down` 
+
+Enable network interface
+> `sudo ifconfig eth0 up` 
 
 ## Set Static IP Address
+Edit netplan config
 
-* `sudo nano /etc/netplan/50-cloud-init.yaml` edit config
+> `sudo nano /etc/netplan/50-cloud-init.yaml` 
+
+With
 
 ```Javascript
 network:
@@ -32,4 +44,6 @@ network:
 
 ```
 
-* `sudo netplan apply` to apply the changes
+Apply netplan changes
+
+> `sudo netplan apply` 
