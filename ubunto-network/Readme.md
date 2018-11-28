@@ -27,7 +27,7 @@ Edit netplan config
 
 With
 
-```Javascript
+```shell
 network:
  version: 2
   renderer: networkd
@@ -40,7 +40,7 @@ network:
      addresses: [10.0.0.4/24]
      gateway4: 0.0.0.0
      nameservers:
-       addresses: [8.8.8.8,8.8.4.4]
+       addresses: []
 
 ```
 
