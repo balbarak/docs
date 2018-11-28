@@ -46,4 +46,4 @@ network:
 
 Apply netplan changes
 
-> `sudo netplan apply` 
+* `sudo netplan apply` 
