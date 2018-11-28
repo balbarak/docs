@@ -9,21 +9,21 @@ To get status of the firewall
 * `sudo ufw status`
 
 Turn off firewall 
-> `sudo ufw disable` 
+* `sudo ufw disable` 
 
 Turn on firewall
-> `sudo ufw enable`  
+* `sudo ufw enable`  
 
 Disable network interface
-> `sudo ifconfig eth0 down` 
+* `sudo ifconfig eth0 down` 
 
 Enable network interface
-> `sudo ifconfig eth0 up` 
+* `sudo ifconfig eth0 up` 
 
 ## Set Static IP Address
 Edit netplan config
 
-> `sudo nano /etc/netplan/50-cloud-init.yaml` 
+* `sudo nano /etc/netplan/50-cloud-init.yaml` 
 
 With
 
