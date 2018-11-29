@@ -7,9 +7,11 @@
 ## Add repos and neccssory packages
 
 * `sudo add-apt-repository ppa:ondrej/php`
-* `sudo apt-get install unzip`
+* `sudo add-apt-repository universe`
 
 ## Install Apache2 and MySQL
+
+* `sudo apt-get install unzip`
 * `sudo apt-get install apache2`
 * `sudo apt-get install mysql-server`
 
@@ -37,6 +39,9 @@
 * `sudo apt-get install php7.1-cli`
 * `sudo apt-get install php7.1-ldap`
 * `sudo apt-get install php7.1-curl`
+* `sudo apt-get install php7.1-bcmath`
+* `sudo apt-get install php7.1-mcrypt`
+* `sudo apt-get install php7.1-zip`
 
 ### Setup Share file (optional)
 This step is to share folder between windows and ubuntu
@@ -45,12 +50,8 @@ This step is to share folder between windows and ubuntu
 * `sudo mkdir /home/share`
 * `sudo mount.cifs //10.1.1.2/Opensources /home/share -o user=Admin`
 
-## Vendta
-* `sudo apt-get install php7.1-zip` 
-
-Check php version
-
-`php -v`
+### Check php version
+* `php -v`
 
 
 ### Install mcrypt 
