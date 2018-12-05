@@ -75,10 +75,41 @@ Open apache2 config
 </Directory>
 ```
 
+### Create Magento Config file
+
+* `sudo nano /etc/apache2/sites-available/magento.conf`
+
+and paste the following config text:-
+
+```shell
+<VirtualHost *:80>
+     ServerAdmin admin@example.com
+     DocumentRoot /var/www/html/magento/
+     ServerName example.com
+     ServerAlias www.example.com
+
+     <Directory /var/www/html/magento/>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Order allow,deny
+        allow from all
+     </Directory>
+
+     ErrorLog ${APACHE_LOG_DIR}/error.log
+     CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+
+
+### Enable Rewrite Module
+
+* `sudo a2ensite magento.conf`
+* `sudo a2enmod rewrite`
+* `sudo systemctl reload apache2`
+
 ### Restart Apache2 Server
 
 * `sudo systemctl restart apache2`
-
 
 
 ## Setup (Mariadb) MySql Database
