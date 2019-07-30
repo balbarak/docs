@@ -7,7 +7,7 @@ This is a guide on how to install colored and pro terminal in mac using ZSH and 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 `
 
-## Install ZSH
+### Install ZSH
 
 check your zsh version
 
@@ -17,22 +17,26 @@ install the latest zsh
 
 `brew install zsh`
 
-## Install Oh My ZSH
+### Install Oh My ZSH
 
 use the follwing commands
 
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 `
 
-to upgrade 
+upgrade to the latest version 
 
 `upgrade_oh_my_zsh`
 
 
-## Change ZSH theme
+### Change ZSH theme
 
 `open ~/.zshrc`
 
 change 
 
 `ZSH_THEME="af-magic"`
+
+### Theme list
+
+https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
