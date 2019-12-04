@@ -8,13 +8,15 @@ Setup folder to share it with Windows
 
 `sudo apt-get install samba-common`
 
-`sudo apt-get install python-glade2`
-
-`sudo system-config-samba`
-
 ## Create dir to share
 
 `sudo mkdir /home/share`
+
+## Set dir permisson to allow anyonmouse
+
+`sudo chmod 0777 /home/share`
+
+`sudo chown -R nobody:nogroup /home/share`
 
 ## Edit sambe config
 
@@ -24,9 +26,9 @@ Setup folder to share it with Windows
 
 ```js
 [globa]
-worgroup = WORKGROUP
+workgroup = WORKGROUP
 server string = Samba Server %v
-netbios name = UBUNTU-SERVER
+netbios name = ubuntu
 security = user
 map to guest = bad user
 name resolve order = bcast host
@@ -36,10 +38,10 @@ bind interfaces only = yes
 # == Share Folder===
 # Folder Name Public
 [Public]
-path = /home/share
-wrtable = yes
-quest ok = yes
-quest only = yes
+path = /home/Public
+writable = yes
+guest ok = yes
+guest only = yes
 read only = no
 create mode = 0777
 directory mode = 0777
@@ -55,16 +57,6 @@ valid users = <user>
 create mask = 0640
 directory mask = 750
 ```
+## Restart Samba service
 
-## Add sambe user
-`sudo addgroup mygroup`
-
-`sudo adduser user mygroup`
-
-`sudo smbpasswd -a user`
-
-## Change owner and permissions
-
-`sudo chown -v -R root:mygroup /home/protected`
-
-`sudo chmod -v -R 0770 /home/protected`
+`sudo systemctl restart smbd`
