@@ -18,7 +18,7 @@ Setup folder to share it with Windows
 
 `sudo chown -R nobody:nogroup /home/share`
 
-## Edit sambe config
+## Edit Samba config
 
 `sudo nano /etc/samba/smb.conf`
 
