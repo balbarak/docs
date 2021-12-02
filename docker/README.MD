@@ -7,10 +7,13 @@
 `sudo docker ps -a`
 
 
-### Run Container
+### Run Container Silent
 `sudo docker run -it -d "image-name"`
 ### Stop Container
 `sudo docker stop "container name"`
 
 ### Run bash cli inside docker image
 `sudo docker exec -it "container id" bash`
+
+### Expose docker port to host port
+`sudo docker run -it -d -p hostPort:containerPort "image name"`
