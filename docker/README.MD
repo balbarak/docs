@@ -17,3 +17,8 @@
 
 ### Expose docker port to host port
 `sudo docker run -it -d -p hostPort:containerPort "image name"`
+
+### Copy files to container
+`sudo docker cp <path> containerId:<path>`
+Ex
+`sudo docker cp /home/data 9028843:/home/files`
