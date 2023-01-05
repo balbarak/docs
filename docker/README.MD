@@ -23,7 +23,7 @@
 Ex
 `sudo docker cp /home/data 9028843:/home/files`
 
-### clean images 
+### Clean images 
 `docker system prune`
 
 ### Remove all images
