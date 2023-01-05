@@ -22,3 +22,9 @@
 `sudo docker cp <path> containerId:<path>`
 Ex
 `sudo docker cp /home/data 9028843:/home/files`
+
+### clean images 
+`docker system prune`
+
+### Remove all images
+`docker system prune -a`
