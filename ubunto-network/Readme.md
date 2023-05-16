@@ -47,3 +47,8 @@ network:
 Apply netplan changes
 
 * `sudo netplan apply` 
+
+# Install VPN
+`wget  https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh`
+`sudo chmod +x openvpn-install.sh`
+`./openvpn-install.sh`
